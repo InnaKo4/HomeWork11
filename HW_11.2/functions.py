@@ -28,7 +28,7 @@ def get_candidates_by_skill(skill_name):
     candidates = load_candidates_from_json()
     for candidate in candidates:
         candidate_skills = candidate['skills'].lower()
-        if skill_name.lower() in candidate_skills:
+        if skill_name.lower() in candidate_skills.split(', '):
             skill_owned.append(candidate)
     return skill_owned
 
