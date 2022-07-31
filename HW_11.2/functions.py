@@ -13,28 +13,22 @@ def get_candidate(candidate_id):
         if candidate_id == candidate['id']:
             return candidate
 
-def count_candidates_by_name(name):
-    """Выводит количество кандидатов по имени"""
-    candidates = load_candidates_from_json()
-    candidates_by_name = []
-    for candidate in candidates:
-        if name in candidate['name']:
-            candidates_by_name.append(name)
-            return len(candidates_by_name)
-
 def get_candidates_by_name(candidate_name):
     """Выводит данные кандидата по имени"""
     candidates = load_candidates_from_json()
+    candidates_by_name = []
     for candidate in candidates:
         if candidate_name in candidate['name']:
-            return candidate
+            candidates_by_name.append(candidate)
+    return candidates_by_name
 
 def get_candidates_by_skill(skill_name):
     """Выводит кандидатов по скиллу"""
     skill_owned = []
     candidates = load_candidates_from_json()
     for candidate in candidates:
-        if skill_name.lower() in candidate['skills']:
+        candidate_skills = candidate['skills'].lower()
+        if skill_name.lower() in candidate_skills:
             skill_owned.append(candidate)
-        return skill_owned
+    return skill_owned
 

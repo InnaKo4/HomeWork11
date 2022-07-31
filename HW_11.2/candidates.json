@@ -43,7 +43,7 @@
     "position": "HR manager",
     "gender": "male",
     "age": 35,
-    "skills": "LinkedIn, telegram, spam, spam, spam"
+    "skills": "linkedin, telegram, spam, spam, spam"
   },
   {
     "id": 6,
@@ -52,7 +52,7 @@
     "position": "python-develop",
     "gender": "male",
     "age": 26,
-    "skills": "python, html"
+    "skills": "Python, html"
   },
   {
     "id": 7,
@@ -61,6 +61,6 @@
     "position": "Django developer",
     "gender": "female",
     "age": 33,
-    "skills": "Python, Django, flask"
+    "skills": "python, django, flask"
   }
 ]
